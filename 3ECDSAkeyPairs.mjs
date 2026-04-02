@@ -14,5 +14,5 @@ async function generateEcKey(namedCurve = 'P-256') {
 }
 
 const { publicKey, privateKey } = await generateEcKey();
-console.log('public:', publicKey);
-console.log('private:', privateKey);
+console.log(publicKey);
+console.log(privateKey);

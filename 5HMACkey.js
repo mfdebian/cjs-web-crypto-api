@@ -10,5 +10,5 @@ const generateHmacKey = async (hash = 'SHA-256') => {
 }
 
 generateHmacKey()
-  .then((hmacKey) => console.log('HMAC key:', hmacKey))
+  .then((hmacKey) => console.log(hmacKey))
   .catch((error) => console.error(error));

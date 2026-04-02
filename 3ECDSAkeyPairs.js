@@ -15,7 +15,7 @@ async function generateEcKey(namedCurve = 'P-256') {
 
 generateEcKey()
   .then(({ publicKey, privateKey }) => {
-    console.log('public:', publicKey);
-    console.log('private:', privateKey);
+    console.log(publicKey);
+    console.log(privateKey);
   })
   .catch((error) => console.error(error));

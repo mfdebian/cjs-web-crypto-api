@@ -11,4 +11,4 @@ async function generateRsaKey(modulusLength = 2048, hash = 'SHA-256') {
 };
 
 const rsaKey = await generateRsaKey();
-console.log('RSA key pair:', rsaKey);
+console.log(rsaKey);

@@ -12,6 +12,6 @@ async function generateRsaKey(modulusLength = 2048, hash = 'SHA-256') {
 
 generateRsaKey()
   .then((rsaKey) => {
-    console.log('RSA key pair:', rsaKey);
+    console.log(rsaKey);
   })
   .catch((error) => console.error(error));
