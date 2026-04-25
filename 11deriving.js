@@ -47,9 +47,9 @@ async function pbkdf2Key(pass, salt, iterations = 1000, length = 256) {
 }
 
 pbkdf2('Totally secret password', salt)
-  .then(console.log)
-  .catch(console.error);
+  .then((bits) => console.log(bits))
+  .catch((error) => console.error(error));
 
 pbkdf2Key('Totally secret password', salt)
-  .then(console.log)
-  .catch(console.error);
+  .then((derivedKey) => console.log(derivedKey))
+  .catch((error) => console.error(error));

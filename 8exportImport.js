@@ -19,6 +19,6 @@ async function importHmacKey(keyData, format = 'jwk', hash = 'SHA-512') {
 }
 
 generateAndExportHmacKey()
-  .then(importHmacKey)
-  .then(console.log)
-  .catch(console.error)
+  .then((exportedKey) => importHmacKey(exportedKey))
+  .then((importedKey) => console.log(importedKey))
+  .catch((error) => console.error(error));

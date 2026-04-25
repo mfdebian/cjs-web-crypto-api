@@ -7,5 +7,5 @@ async function digest(data, algorithm = 'SHA-512') {
 }
 
 digest('My dog is named Pitu')
-  .then(console.log)
-  .catch(console.error);
+  .then((hash) => console.log(hash))
+  .catch((error) => console.error(error));

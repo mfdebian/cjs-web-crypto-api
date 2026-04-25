@@ -39,5 +39,5 @@ async function unwrapHmacKey(
 
 generateAndWrapHmacKey()
   .then(({wrappedKey, wrappingKey}) => unwrapHmacKey(wrappedKey, wrappingKey))
-  .then(console.log)
-  .catch(console.error)
+  .then((key) => console.log(key))
+  .catch((error) => console.error(error));

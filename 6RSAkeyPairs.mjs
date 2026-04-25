@@ -10,5 +10,6 @@ async function generateRsaKey(modulusLength = 2048, hash = 'SHA-256') {
   }, true, ['sign', 'verify']);
 };
 
-const rsaKey = await generateRsaKey();
-console.log(rsaKey);
+const {publicKey, privateKey} = await generateRsaKey();
+console.log(publicKey);
+console.log(privateKey);

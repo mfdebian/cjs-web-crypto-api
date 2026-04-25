@@ -42,6 +42,6 @@ async function aesDecrypt(aesEncrypted) {
 }
 
 aesEncrypt('Just one more cup of coffee')
-  .then(aesDecrypt)
-  .then(console.log)
-  .catch(console.error);
+  .then((aesEncrypted) => aesDecrypt(aesEncrypted))
+  .then((decrypted) => console.log(decrypted))
+  .catch((error) => console.error(error));

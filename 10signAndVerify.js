@@ -47,4 +47,4 @@ generateRsaKeyPair()
         : 'I am more of a cat person',
     ),
   )
-  .catch(console.error);
+  .catch((error) => console.error(error));

@@ -6,5 +6,5 @@ async function digest(data, algorithm = 'SHA-512') {
   return digest;
 }
 
-const digested = await digest('My dog is named Pitu');
-console.log(digested);
+const hash = await digest('My dog is named Pitu');
+console.log(hash);

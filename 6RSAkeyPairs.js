@@ -11,7 +11,8 @@ async function generateRsaKey(modulusLength = 2048, hash = 'SHA-256') {
 };
 
 generateRsaKey()
-  .then((rsaKey) => {
-    console.log(rsaKey);
+  .then(({ publicKey, privateKey }) => {
+    console.log(publicKey);
+    console.log(privateKey);
   })
   .catch((error) => console.error(error));
