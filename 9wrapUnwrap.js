@@ -1,4 +1,4 @@
-const { subtle } = globalThis.crypto;
+const { subtle } = require('node:crypto').webcrypto;
 
 async function generateAndWrapHmacKey(format = 'jwk', hash = 'SHA-512') {
   const [
@@ -37,6 +37,7 @@ async function unwrapHmacKey(
   return key;
 }
 
-const { wrappedKey, wrappingKey } = await generateAndWrapHmacKey();
-const key = await unwrapHmacKey(wrappedKey, wrappingKey)
-console.log(key);
+generateAndWrapHmacKey()
+  .then(({wrappedKey, wrappingKey}) => unwrapHmacKey(wrappedKey, wrappingKey))
+  .then(console.log)
+  .catch(console.error)
