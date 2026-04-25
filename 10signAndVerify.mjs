@@ -44,7 +44,7 @@ const isDogPartOfFamily = await verify(
 );
 
 console.log(
-  isDogPartOfFamily
-    ? 'I told you! They definitely are'
+  isDogPartOfFamily ?
+    'I told you! They definitely are'
     : 'I am more of a cat person',
 );
